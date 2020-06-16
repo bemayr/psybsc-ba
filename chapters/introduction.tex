@@ -1,0 +1,23 @@
+\chapter{Problem Definition/Hypothesis and Research Question (1)}
+- "Disappointingly little theory and few research paradigms from these fields have been imported into the psychological study of programming." \autocite[253]{curtis_psychology_1990}
+- Solving organizational processes by inducing a technology-based rethinking process \autocite[266]{curtis_psychology_1990}
+- "Psychology of Programming" vs. "Psychology of Software Development" \autocite[267]{curtis_psychology_1990}
+- "A \emph{program} is a succinct description of a temporal process." \autocite[3]{green_pictures_1982}
+- on why Statecharts are used "Naturally, statechart models will concentrate on requirements concerning dynamic system behavior and interaction." \autocite[1]{glinz_statecharts_2002}
+- "More generally, much current discussion of programming seems to assume that programming is similar to industrial production, the programmer being regarded as a component of that production, a component that has to be controlled by rules of procedure and which can be replaced easily." \autocite[237]{naur_programming_1985}
+The process of developing software can be seen as a communication process. Beginning with requirements analysis, these have to be understood, implemented, tested and shipped to the customer. This process ideally happens iteratively and incrementally, which means that the steps are repeated and refined over time.
+Currently the implementation of this process entails a lot of problems as described in the next section.
+Utilizing the features of Statecharts and hole driven development to align this process closer to how people think might result in a huge productivity boost and take a lot of burden off the people involved in creating software.
+
+Statecharts \autocite{harel_statecharts:_1987} are a "visual formalism for complex systems". In more general words this means that Statecharts describe a mathematically proven visual language for creating computer programs. The visual notation is executable and can directly be aligned to a textual notation, which results in the fact, that a program can be visualized automatically. This visualization combines flowcharts and state diagrams. On top of that this visualization provides simulation capabilities and therefore enables people to visually see and experiment with the \emph{logic} of the program, without actually using the program. In fact, the program might not even exist at this point, but people can collaboratively design \emph{what the program should do.} The main hypothesis is that this duality of visualization and executability enables the creation of a common mental model, resulting in a common level of communication.
+
+To further improve this communication process, the fractal nature of Statecharts (logic can be refined from abstract to concrete) is the perfect fit for hole driven development. This relatively new idea of writing computer programs can be compared with a "fill in the blank" exercise. Instead of having to write a complete program, developers can leave holes for the computer and then ask it to provide help. After that, mathematical reasoning combined with knowledge about the already written parts can be applied to provide proposals for these blanks. Applying this idea at a way higher level, the second hypothesis is that using holes in Statecharts (enabled by their fractal nature) enables a new way of communicating and refining requirements.
+
+This leads to the research question: \emph{Which findings of cognitive psychology support the usage of Statecharts combined with hole driven development for enabling better communication in software development processes, or how can those concepts be adapted to closer align to the way the human brain works?}
+
+\textbf{Code is the \textit{only real} source of truth}
+
+\section{State of the Art}
+\label{sec:state-of-the-art}
+The software development process involves a lot of participants. The customer or user imagines the perfect product, the requirements engineer thinks in user stories, testers use acceptance criteria and developers think in source code. All of them create their own mental model of the same thing. When building something like a virtual reality training in addition to the previously mentioned participants there are content designers who think in flowcharts and narrators who have narration structures in their minds when thinking and talking about the training.
+They have all built up their way of approaching the problem and also use the tools appropriate to their task, but talking about the same thing in "different languages" always requires translations. So why not build a system that does these translations and takes this cognitive load off of people?
