@@ -12,9 +12,32 @@
 \usepackage{microtype} % fixes line breaks
 \usepackage[a4paper, margin=2.5cm, top=3.5cm, bottom=3.5cm]{geometry}
 \usepackage[automark, headsepline, singlespacing=true]{scrlayer-scrpage}
+\usepackage{varioref}
+\usepackage{cleveref}
 \usepackage{pdfpages}
+\usepackage{epigraph}
+\usepackage{xcolor} % http://tex.stackexchange.com/a/150377
+\usepackage{listings}
 
 \linespread{1.25}
+
+\graphicspath{ {./images/} }
+
+\definecolor{linenumbers}{rgb}{0.25, 0.25, 0.25}
+\definecolor{linebreakmarker}{rgb}{0.25, 0.25, 0.25}
+
+\lstset{ %
+  belowcaptionskip=1\baselineskip{},
+  breaklines=true,
+  postbreak=\mbox{\textcolor{linebreakmarker}{$\hookrightarrow$}\space},
+  captionpos=b,
+  numbers=left,
+  numbersep=16pt,
+  numberstyle=\tiny\color{linenumbers},
+  tabsize=2
+}
+
+\usepackage{todonotes}
 
 % === actual document === %
 
@@ -39,13 +62,12 @@
 \tableofcontents
 \mainmatter
 
-\input{chapters/latex-information}
 \input{chapters/introduction}
 \input{chapters/technological-foundation}
 \input{chapters/psychological-foundation}
 \input{chapters/implications}
 \input{chapters/discussion}
-\input{chapters/outlook}
+\input{chapters/conclusions}
 
 \listoffigures
 \printbibliography
