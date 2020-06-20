@@ -5,7 +5,7 @@
 \DeclareLanguageMapping{american}{american-apa}
 \addbibresource{bibliography.bib}
 
-\usepackage{enumitem} % numbered lists
+\usepackage[inline]{enumitem} % numbered lists
 \usepackage{ragged2e} % justification
 \usepackage{textcomp}
 \usepackage{setspace}
@@ -13,11 +13,14 @@
 \usepackage[a4paper, margin=2.5cm, top=3.5cm, bottom=3.5cm]{geometry}
 \usepackage[automark, headsepline, singlespacing=true]{scrlayer-scrpage}
 \usepackage{varioref}
-\usepackage{cleveref}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
 \usepackage{pdfpages}
 \usepackage{epigraph}
 \usepackage{xcolor} % http://tex.stackexchange.com/a/150377
 \usepackage{listings}
+\usepackage{tocbibind}
+\usepackage{siunitx}
 
 \linespread{1.25}
 
@@ -67,7 +70,6 @@
 \input{chapters/psychological-foundation}
 \input{chapters/implications}
 \input{chapters/discussion}
-\input{chapters/conclusions}
 
 \listoffigures
 \printbibliography
