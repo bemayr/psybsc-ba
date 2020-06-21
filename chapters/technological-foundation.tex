@@ -7,24 +7,23 @@ For example knowing what is meant by \emph{state} and \emph{transition} in David
 As stated by \textcite{schraube_ich_2012}, the interaction between a person's psyche and technology is always bidirectional, we get shaped by technology the same way we shape it.
 
 \section{Characteristics of Software Development Processes}
-\todo{that's new}
 \label{sec:characteristics-of-software-development-processes}
-Upon answering the question on how communication in software development processes can be improved using technology, it is important to define these processes, take a quick look at the history and examine the difficulties of changing requirements.
+Upon answering the question on how communication in software development processes can be improved using technology, it is important to define these processes, take a quick look at their history and examine the difficulties of changing requirements.
 
 The complex process of software development involves a lot of tasks, stakeholders and uncertainties \autocite{mayr_projekt_2005}.
 Being able to plan, organize and control this process, different paradigms of organizing the process of software development were established and improved.
 Independent of the software development paradigm, six main phases can be identified, namely: \emph{requirements analysis}, \emph{specification}, \emph{design}, \emph{implementation}, \emph{testing} and \emph{maintenance} \autocite{harel_statecharts:_1987}.
-Somehow those phases have to be completed in that order, albeit the paradigms differ in the way the phases are went through, 
+Somehow these phases have to be completed in that order, albeit the paradigms differ in the way the phases are went through, 
 The most notable differences are the flexibility in adapting to changing requirements, customer communication, the way phase transitions are handled, how fast the project iterates and how often intermediate results are delivered \autocite{mayr_projekt_2005}.
 
 \subsection{Traditional Paradigms vs. Agile Paradigms}
-\todo{that's new}
 \label{sub:traditional-vs-agile}
 As described in \textcite{mayr_projekt_2005}, the evolution of software development paradigms underwent a lot of change.
 Over time the characteristics changed from rigorous (traditional, heavy and stable) to agile (modern, lean, fragile), with the agile movement based on \textcite{fowler_agile_2000} as the current status quo \autocite{ousterhout_philosophy_2018}.
 In comparison to the documentation-heavy traditional paradigms, agile paradigms got rid of documentation overhead, heavily rely on prototyping and follow an iterative-incremental model \autocite{mayr_projekt_2005}.
 This iterative-incremental model is characterized by short consecutive development cycles and a high frequency in delivering intermediate products, thus staying in close contact with the customer, making sure that the right product is delivered and requirements are understood correctly \autocite{mayr_projekt_2005}.
-Dispensing long requirement analysis and specification phases in favor of a short time to market affects software architecture and design, subsequently complicating the creation of well-architectured, solid software.
+
+Dispensing long requirements analysis and specification phases in favor of a short time to market affects software architecture and design, subsequently complicating the creation of well-architectured, solid software.
 \textcite{ousterhout_philosophy_2018} introduces the terms \emph{tactical programming} and \emph{strategic programming}.
 While the main focus of tactical programming is to create something that works, the focus of strategic programming is to create something that lasts.
 In the end this is a business decision, but the effects it has on software development have a huge impact regarding the design of stable, well-constructed systems \autocite{ousterhout_philosophy_2018}.
@@ -106,9 +105,9 @@ Taking a look at \cref{fig:statecharts-example} this statechart transmits this i
 \begin{itemize}
     \item The outermost box \emph{displays} is a compound state containing multiple sub-states such as \emph{time}, \emph{data}, \emph{alarm 1} and so on. In statecharts a compound state is defined by having multiple sub-states with exactly one being active at a certain point in time.
     \item The arrow originating in a black dot leading into \emph{time} specifies that this state is the initial active state of \emph{displays}.
-    \item The labels \emph{d} and \emph{a} name events that can happen in a the system. In this particular example by David Harel the digital wrist watch contains four buttons, that upon pressing raise the events \emph{a}, \emph{b}, \emph{c} and \emph{d}.
-    \item The arrows labeled \emph{d} between \emph{time} and \emph{date} can be translated to a toggle functionality between the time and display states of the watch.
-    \item The arrow labeled with \emph{2 min in date} follows exactly its description. If the state \emph{date} has been active for two minutes and no event occurred the state \emph{time} is automatically entered.
+    \item The labels \emph{d} and \emph{a} name events that can occur in the system. In this particular example by David Harel the digital wrist watch contains four buttons, that upon pressing raise the events \emph{a}, \emph{b}, \emph{c} and \emph{d}.
+    \item The arrows labeled \emph{d} between \emph{time} and \emph{date} can be translated to a toggle functionality between the \emph{time} and \emph{date} states of the watch.
+    \item The arrow labeled with \emph{2 min in date} follows exactly its description. If the state \emph{date} has been active for two minutes and no event occurred, the system automatically switches to the state \emph{time}.
     \item If the system is in state \emph{time} and the event \emph{a} occurs it will transition to \emph{alarm 1}, on another press of \emph{a} into state \emph{alarm 2} and so on.
 \end{itemize}
 
@@ -121,7 +120,7 @@ For a full overview of the available features of statecharts please refer to \te
 \label{sub:goals-behind-statecharts}
 In \citeyear{harel_statecharts_2007}, David Harel published his personal story behind statecharts titled ``Statecharts in the Making: A Personal Account'' \autocite{harel_statecharts_2007}.
 In this paper he talks about his psychological ideas and observations during the development of statecharts in the eighties.
-Apart from creating a \emph{visual formalism} for reactive systems, he wanted to create a notation for \emph{model-based development} (which became really popular with the Unified Modeling Language [\textcite{cook_unified_2017}]) and an executable model where the behavior ``can and should be executed just like [with] conventional computer programs [...]'' \autocite[1]{harel_statecharts_2007}.
+Apart from creating a \emph{visual formalism} for reactive systems, he wanted to create a notation for \emph{model-based development} (which became really popular with the Unified Modeling Language [\textcite{cook_unified_2017}]) and an executable model where the behavior ``can and should be executed just like [in] conventional computer programs [...]'' \autocite[1]{harel_statecharts_2007}.
 This technical goals lay the foundation for two of his greater goals that can be attributed to social psychology \autocite[3--4]{harel_statecharts_2007}:
 \begin{itemize}
     \item ``The goal was to try to find, or to invent for these experts, a means for simply saying what they seemed to have had in their minds anyway.''
@@ -142,7 +141,7 @@ As described earlier, statecharts feature the concept of compound states, wherei
 This property perfectly maps to ``geometric figures that appear the same at different levels'' and André Staltz's definition of fractal architectures.
 This state nesting allows to refine the behavior of a certain state by adding sub-states and thus adapting to new requirements without breaking others \autocite{harel_statecharts:_1987}.
 \textcite{leveson_experiences_1991} discuss the two main strategies of transforming requirements into software: \emph{top-down} and \emph{bottom-up}.
-The top-down strategy is based on top-down refinement where requirements are deconstructed one by one, starting from the most abstract one transitioning down the tree of requirements.
+The top-down strategy is based on top-down refinement where requirements are deconstructed one by one, starting from the most abstract one, transitioning down the tree of requirements.
 Unfortunately, this process only works for experts possessing a huge knowledge in software design and the problem domain.
 The bottom-up strategy, on the other hand, is characterized by less upfront thoughts about design and immediately starting with the implementation of requirements at a very detailed level.
 A major problem using this approach is that a well designed software architecture is nearly impossible to reach, especially as applications get larger \autocite{horrocks_constructing_1999}.
@@ -210,7 +209,7 @@ Let's take a look at how holes are simulated in programming languages that don't
 
 \subsection{Simulating Holes}
 In languages that do not provide the feature of typed holes, programmers tend to come up with alternative solutions to holes without knowing of their existence.
-Psychological research (see \cref{sub:incomplete-thoughts}) indicates that the process of creating these holes is so natural to the thought process that even within languages without the concept of holes, developers find a way of expressing those.
+Psychological research (see \cref{sub:incomplete-thoughts}) indicates that the process of creating these holes is so natural to the thought process that even within languages without the concept of holes, developers find a way of expressing them.
 There are mainly two ways of simulating holes:
 \begin{enumerate}
 \item One might throw exceptions such as \verb|NotImplementedException|, as documented in \textcite{microsoft_notimplementedexception_2020}, to signal that a feature is not yet implemented.
@@ -226,13 +225,13 @@ These two concepts might look like sufficient surrogates at first, so what are t
 
 \subsection{Incomplete Thoughts}
 \label{sub:incomplete-thoughts}
-In the meta-analysis \citetitle{visser_expert_1990} \citeauthor{visser_expert_1990} conducted in \citeyear{visser_expert_1990} collected thinking processes and strategies of expert programmers \autocite{visser_expert_1990}.
+In the meta-analysis \citetitle{visser_expert_1990} conducted by \citeauthor{visser_expert_1990} in \citeyear{visser_expert_1990}, they collected thinking processes and strategies of expert programmers \autocite{visser_expert_1990}.
 Comparing breadth-first and depth-first design methodologies, they found out that expert developers vary in their usage and most of the time combine both strategies.
 One commonality was the observation that the developers under research were observed making ``notes to themselves'' \autocite[241]{visser_expert_1990}.
-Experts usually excel at maintaining relevant information in memory, nevertheless this memory capacity is limited and working on one problem might relate to other problems until there is not enough capacity left and they start taking those notes.
+Experts usually excel at maintaining relevant information in the working memory, nevertheless this memory capacity is limited and working on one problem might relate to other problems until there is not enough capacity left and they start taking those notes.
 They conclude that ``[...] before introducing the constraints of actual programming languages, experts very often use[d] a personal pseudo-code'' \autocite[242]{visser_expert_1990}.
 
-Combining this research, it seems plausible that real holes enhanced with comments could lead to a programming language that lets developers specify the already thought-out ideas in executable source code while still letting them express their ideas in written natural language with the advantage of the programming environment caring about their ideas.
+Combining this research, it seems plausible that real holes enhanced with comments could lead to a programming language that lets developers specify the already thought-out ideas in executable source code while still letting them express their ideas in written natural language with the advantage of the programming environment actually caring about their ideas.
 
 
 % The internal model is iteratively finetuned during requirements specification development to mimic our understanding of the process with sufficient detail to achieve the desired control performance.
