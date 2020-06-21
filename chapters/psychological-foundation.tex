@@ -9,16 +9,16 @@ Combining psychology with any other academic field enables an enhancement of und
 \label{sec:psychology-of-programming}
 Psychology and programming are often not linked together by ``of'', rather by ``in''.
 The resulting academic fields include Human Computer Interaction (HCI) or User Experience (UX).
-Instead of focusing on the interaction between humans and computers the \emph{psychology of programming} cares about the cognitive and social aspects of programming itself.
-This research's target is not the end-product of programming, but the act of programming.
+Instead of focusing on the interaction between humans and computers, the \emph{psychology of programming} cares about the cognitive and social aspects of programming itself.
+The target of this thesis (and the underlying research) is not the end-product of programming, but the act of programming.
 
 \subsection{History}
 \label{history-of-psychology-of-programming}
-Established in the late 1970s and early 1980s researchers realized that programming tools and technologies should be evaluated based in their ease of usage.
+Established in the late 1970s and early 1980s, researchers realized that programming tools and technologies should be evaluated based upon their ease of usage.
 The human aspect of tools as well as their cognitive effects became more and more important as computational power increased \autocite{sajaniemi_psychology_2008}.
 As \citeauthor{curtis_psychology_1990} stated about the state of integrating social, organizational, ecological and interactional psychology into programming in 1990: ``Disappointingly little theory and few research paradigms from these fields have been imported into the psychological study of programming'' \autocite[253]{curtis_psychology_1990}.
-Unfortunately, academic literature on the topic of psychology of programming did not really advance with only two relevant books available titled \citetitle{weinberg_psychology_1971} \autocite{weinberg_psychology_1971} and \citetitle{hoc_psychology_1990} \autocite{hoc_psychology_1990}.
-Despite this meager amount of literature in 1987 the Psychology of Programming Interest Group\footnote{\url{http://www.ppig.org/}} (PPIG) was founded, still organizing annual workshops and bringing people together from diverse communities to discuss the importance of psychology in programming.
+Unfortunately, academic literature on the topic of psychology of programming did not really advance with only two relevant books available, titled \citetitle{weinberg_psychology_1971} \autocite{weinberg_psychology_1971} and \citetitle{hoc_psychology_1990} \autocite{hoc_psychology_1990}.
+Despite this meager amount of literature in 1987 the Psychology of Programming Interest Group\footnote{\url{http://www.ppig.org/}} (PPIG) was founded, still organizing annual workshops and bringing people together from diverse communities to discuss the importance of psychology of programming.
 As \textcite{sajaniemi_psychology_2008} describes there is a dual character according the research motivation in psychology of programming.
 One the one hand, computer scientists are motivated to create new tools and improve existing ones based on knowledge gained from studying the psychological aspects of programming.
 On the other hand, psychologists are interested in new cognitive insights gained while studying programmers that can be applied to other domains.
@@ -27,47 +27,50 @@ On the other hand, psychologists are interested in new cognitive insights gained
 
 \subsection{Programming as Theory Building}
 \label{sub:programming-as-theory-building}
-In 1985, Peter Naur released his essay \citetitle{naur_programming_1985} that changed the way of how programming was perceived \autocite{naur_programming_1985}.
+In 1985, Peter Naur released his essay \citetitle{naur_programming_1985} that changed the way how programming was perceived \autocite{naur_programming_1985}.
 While the traditional (still broadly applied) perception of programming is the ``production of a program and certain other texts'', Naur's views of programming is that it ``[...] should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory [...]''.
 As summarized and put into other words by \textcite{aranda_naurs_2011}, programmers have to develop a shared understanding of the problem to solve.
-The actual program becomes a by-product of this process, thus the actual creating of source code losing importance.
+The actual program becomes a by-product of this process, thus the actual creation of source code losing importance.
 Supporting this view, \citeauthor{naur_programming_1985} provides two examples of software being handed over to another team.
 If the main process of creating software is the production of source code and documentation, the project hand-over between two teams should be fairly easy.
 After an introductory phase, the new developers should be able to continue working on the product, creating new features, improving existing ones and fixing bugs.
-But as pointed out in \textcite[228--229]{naur_programming_1985}, in both cases the quality and performance decreased constantly after the hand-over, indicating that there must have been something lost while transition from one team to the other.
-As Peter Naur's put it into words: ``Thus, again, the program text and its documentation has proved insufficient as a carrier of some of the most important design ideas'' \autocite[229]{naur_programming_1985}.
+But as pointed out in \textcite[228--229]{naur_programming_1985}, in both investigated cases the quality and performance decreased constantly after the hand-over, indicating that there must have been something lost during the transition from one team to the other.
+As Peter Naur put it into words: ``Thus, again, the program text and its documentation has proved insufficient as a carrier of some of the most important design ideas'' \autocite[229]{naur_programming_1985}.
 
-The definition of theory is closely aligned to the one defined by \textcite{ryle_concept_1984}.
+The definition of theory used in this thesis is closely aligned to the one defined by \textcite{ryle_concept_1984}.
 \emph{Theory} is understood as the knowledge a person possesses that does not only allow one to accomplish certain things, but also explain them, answer questions and argue about \autocite{naur_programming_1985}.
-This leads to the following definitions \autocite[234]{naur_programming_1985}:
+This leads to the following observations \autocite[234]{naur_programming_1985}:
 \begin{itemize}
     \item ``The death of a program happens when the programming team possessing its theory is dissolved.''
     \item ``Revival of a program is the rebuilding of its theory by a new programmer team.''
 \end{itemize}
 
 Regarding changing requirements (see \cref{sub:requirements-analysis}), Peter Naur's views differentiate strongly from those presented in \cref{sub:traditional-vs-agile}, thus presenting a possible explanation for the difficulties of changing requirements.
-Keeping the option to modify programs lately in the development process (develop for potentially changing requirements) is a synonym for program flexibility.
-Comparing flexibility to other engineering disciplines as the construction of buildings, modifications are extremely expensive and re-construction is often found to be preferable \autocite{naur_programming_1985}.
+Keeping the option to modify programs late in the development process (develop for potentially changing requirements) is a synonym for program flexibility.
+Comparing flexibility to other engineering disciplines like the construction of buildings, modifications are extremely expensive and re-construction is often found to be preferable \autocite{naur_programming_1985}.
 Looking at programs through the perspective of programming as theory building, this analogy can be applied as well.
-Just because a program seems to consist of text files, adapting it cannot be accomplished by simply editing those files, instead the under-laying theory has to be modified and shared inside the programming team.
+Just because a program seems to consist of text files, adapting it cannot be accomplished by simply editing those files.
+Instead the underlying theory has to be modified and shared inside the programming team.
 
 
 \section{Mental Models}
 \label{sec:mental-models}
-There are many possible ways of defining mental models \autocite{herczeg_software-ergonomie_2018}, one possible definition that aligns well with the discipline of engineering is given by \textcite[7]{rouse_looking_1986}: ``Mental models are mechanisms whereby humans are able to generate descriptions of system purpose and form, explanations of system functioning and observed system states, and predictions of future system states.''
-Complementing this definition, mental models are based on beliefs, not facts, let people anticipate behaviour of systems and are in flux \autocite{dutke_mentale_1994}.
+There are many possible ways of defining mental models \autocite{herczeg_software-ergonomie_2018}.
+One possible definition that aligns well with the discipline of engineering is given by \textcite[7]{rouse_looking_1986}: ``Mental models are mechanisms whereby humans are able to generate descriptions of system purpose and form, explanations of system functioning and observed system states, and predictions of future system states.''
+Complementing this definition, mental models are based on beliefs, not facts, let people anticipate behavior of systems and are in flux \autocite{dutke_mentale_1994}.
 Due to mental models being based on beliefs and the fact that a model abstracts reality it is important to note that mental models might be erroneous and incomplete \autocite{herczeg_software-ergonomie_2018}.
-However mental models being in a constant state of flux means that they are flexible, temporary and constantly adapt to new information.
+However, mental models being in a constant state of flux indicates that they are flexible, temporary and constantly adapt to new information.
 
-Mental models are heavily based on analogies \autocite{dutke_mentale_1994}, where an analogy is a similarity in some respects between things that are otherwise dissimilar.
+Mental models are heavily based on analogies \autocite{dutke_mentale_1994}, where an analogy is a similarity in some respect between things that are otherwise dissimilar.
 Analogies can be conveyed using metaphors, didactic tools for pointing out analogies, often times utilizing visual similarities.
 
 Another property of mental models as described in \textcite{dutke_mentale_1994} is their capability of simulation.
-This is possible, because mental models are procedural not static, a process called ``envisioning'' creates a causal model which can then be ``run'' to simulate processes and predict future system states.
+This is possible, because mental models are procedural and not static.
+A process called \emph{envisioning} creates a causal model which can then be ``run'' to simulate processes and predict future system states.
 %Multiple experiments were conducted to prove this theory \autocite{dutke_mentale_1994}.
 
 Due to the importance of mental models for the understanding of systems, mental model mismatches should be acted upon as soon as possible.
-\textcite{nielsen_mental_2010} proposes two different ways of tackling mental model mismatches: ``make the system conform'', and ``improve the users' mental models''.
+\textcite{nielsen_mental_2010} proposes two different ways of tackling mental model mismatches: ``make the system compliant'', and ``improve the users' mental models''.
 \textcite{kitchenham_research_1990} state the problem of sharing ideas in programming as ``[u]nderstanding a design developed by another designer often involves understanding a solution that you yourself would never have envisaged, given the particular problem statement.''
 Based on Peter Naur's observations in \citetitle{naur_programming_1985} the other's design or solution equals a theory, thus representing the other's mental model.
 Sharing a common mental model developers ``add code in ways that fit together'' \autocite[239]{naur_programming_1985}.
@@ -75,8 +78,8 @@ Developing a shared understanding needs the right documentation, according to Pe
 Based on the observations conducted by \textcite[240]{naur_programming_1985} those are ``metaphors'', ``text describing the purpose of the major components'' as well as ``diagrams representing the interactions between them''.
 These findings will lay the basis for the implications presented in \cref{chap:possible-applications}.
 
-Reading David Harel's essay \citetitle{harel_statecharts_2007} with this knowledge about mental models in mind, the main problem in the mentioned project at IAI (Israel Aerospace Industries) prior to introducing Statecharts gets pretty obvious.
-All the development teams possessed different mental models, that were not aligned to each other or as David Harel discoverd after talking to the different teams (radar people, flight control people, communications people, ...) ``each group had had their own idiosyncratic way of thinking about the system, their own way of talking, their own diagrams, and their own emphases'' according to \textcite{harel_statecharts_2007}.
+Reading David Harel's essay \citetitle{harel_statecharts_2007} with this knowledge about mental models in mind, the main problem in the mentioned project at IAI (Israel Aerospace Industries) prior to introducing statecharts gets pretty obvious.
+All the development teams possessed different mental models that were not aligned to each other or, as \citeauthor{harel_statecharts_2007} discovered after talking to the different teams (radar people, flight control people, communications people, ...), ``each group had had their own idiosyncratic way of thinking about the system, their own way of talking, their own diagrams, and their own emphases'', according to \textcite{harel_statecharts_2007}.
 
 
 % - Cognitive Issues in Software Development regarding Design Notations (Thinking in States, Mathematical vs. Structured Methods) \autocite[281--282]{kitchenham_research_1990}
@@ -92,13 +95,13 @@ All the development teams possessed different mental models, that were not align
 %- [Visual Representation - The Encyclopedia of Human-Computer Interaction, 2nd Ed.](https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/visual-representation)
 %\subsection{Dual Coding Theory}
 %- "In a position in-between we can cite Agnyal [1], who claims that using two synchronised notations (graphical-textual) for the domain model improves its maintainability." \autocite[3]{melia_comparison_2016}
-%- In regards to Statecharts and modifications \autocite[38--39]{leveson_experiences_1991}
+%- In regards to statecharts and modifications \autocite[38--39]{leveson_experiences_1991}
 %- \url{https://en.wikipedia.org/wiki/Dual-coding_theory}
 %\subsection{Visual Programming (3)}
 %- "information exposure" \autocite[34]{leveson_experiences_1991}
 %- Readability and Reviewability \autocite[37-38]{leveson_experiences_1991}
 %- Some Notes on Visual Programs \autocite[5--6]{green_pictures_1982}
-%- Flowcharts $\rightarrow$ Statecharts (\ref{sec:statecharts}) \autocite[8]{green_pictures_1982}
+%- Flowcharts $\rightarrow$ statecharts (\ref{sec:statecharts}) \autocite[8]{green_pictures_1982}
 %- "backwards tracing is easier in graphical notation than in programming languages." \autocite[20]{green_pictures_1982}
 %\subsection{History}
 %\subsection{Problems}

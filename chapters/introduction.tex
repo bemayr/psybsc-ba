@@ -1,50 +1,52 @@
 \chapter{Introduction}
+\label{chap:introduction}
 \epigraph{``A programmer does not primarily write code; rather, he primarily writes to another programmer about his program solution.''}{\textit{Unknown}}
 \noindent
-Unfortunately the author of this rather social definition of a programmer's tasks was not handed down, nevertheless the article \textcite{anonymous_what_1967} collected by Don Knuth laid the foundation for human-centered programming.
-Reading Peter Naur's influential article \citetitle{naur_programming_1985} written in \citeyear{naur_programming_1985} this human-centered approach to programming seems to be forgotten. Only 18 years later he states that: ``[...] much current discussion of programming seems to assume that programming is similar to industrial production, the programmer being regarded as a component of that production, a component that has to be controlled by rules of procedure and which can be replaced easily.''
+Unfortunately the author of this rather social definition of a programmer's tasks was not handed down, nevertheless the article \textcite{anonymous_what_1967} laid the foundation for human-centered programming.
+Reading Peter Naur's influential article \citetitle{naur_programming_1985} written in \citeyear{naur_programming_1985} \autocite{naur_programming_1985} this human-centered approach to programming seems to have been forgotten. Only 18 years after \citetitle{anonymous_what_1967} he states that: ``[...] much current discussion of programming seems to assume that programming is similar to industrial production, the programmer being regarded as a component of that production, a component that has to be controlled by rules of procedure and which can be replaced easily'' \autocite{naur_programming_1985}.
 At the same time the interdisciplinary research field \emph{Psychology of Programming} originated \autocite{myers_past_2009}, indicating that this mismatch of what programming is and as what it is seen was recognized.
 
 
 \section{Problem Definition}
 \label{sec:problem-definition}
-As stated in \textcite{anonymous_what_1967} programming is a communication process.
-Even if programming is not seen as a mainly human-centered activity, translating thoughts into a language understood by machines is a form of communication, namely \emph{Human Computer Interaction} (HCI).
+As stated in \textcite{anonymous_what_1967}, programming is a communication process.
+Even if programming is not seen as a mainly human-centered activity, translating thoughts into a language understood by machines is a form of communication, namely \emph{Human Computer Interaction} (HCI) \autocite{myers_past_2009}.
 As software got more and more complex, the sole activity of programming transitioned to the much broader task of software development.
-This process begins with the task of requirements analysis, after aquiring a common understanding in the whole team, these have to be implemented, tested and shipped to the customer \autocite{mayr_projekt_2005}.
-Alone this extremely simplified description of software development exhibits the difference to programming.
-\citeauthor{curtis_psychology_1990} stated: ``The fact that this field is usually referred to as the 'psychology of programming' rather than the 'psychology of software development' reflects its primary orientation to the coding phenomena.'' \autocite[267]{curtis_psychology_1990} which shows that this mismatch between programming and software development is not unknown to the psychology of programming.
+This process begins with the task of requirements analysis.
+After acquiring a common understanding in the whole team, these requirements have to be implemented, tested and shipped to the customer \autocite{mayr_projekt_2005}.
+This extremely simplified description of software development alone exhibits the difference to programming.
+\citeauthor{curtis_psychology_1990} stated: ``The fact that this field is usually referred to as the `psychology of programming' rather than the 'psychology of software development' reflects its primary orientation to the coding phenomena.'' \autocite[267]{curtis_psychology_1990} which shows that this mismatch between programming and software development is not unknown to the psychology of programming.
 
-Modern software development processes underlies an iterative and incremental nature \autocite{mayr_projekt_2005} which means that user feedback is constantly incorporated into the development cycle.
-New requirements arise or existing ones have to be refined, in either case the software under development has to be adapted.
+Modern software development processes underlie an iterative and incremental nature \autocite{mayr_projekt_2005} which means that user feedback is constantly incorporated into the development cycle.
+New requirements arise or existing ones are refined, in either case the software under development has to be adapted.
 The basis for this adaption is communication, a human factor, that does not come without its difficulties (see \cref{sec:characteristics-of-software-development-processes}).
-As stated in \citetitle{curtis_psychology_1990} \autocite{curtis_psychology_1990} mainly organizational processes characterize software development.
+As stated in \textcite{curtis_psychology_1990} mainly organizational processes characterize software development.
 
 \emph{Source of truth} is a saying commonly used in software development for the place where something is defined.
-Good software design favors a single source of truth, because then changing the behaviour means changing it only in one place.
+Good software design favors a \emph{single} source of truth, because then changing the behavior means changing it only in one place.
 Applying this idea to the final product of the software development process the single source of truth is the actual source code.
 No matter what a requirements document defines or what the user documentation states, if these are not in sync with the source code, they ``lose'', the code \emph{speaks the real truth}.
 
-So why not adopt \citeauthor{schraube_ich_2012}'s ideas \autocite{schraube_ich_2012} that technology influences people the same way they influence technology and apply these in a way that establishes a technology-based rethinking process inducing a change in organizational processes.
+So why not adopt \citeauthor{schraube_ich_2012}'s ideas \autocite{schraube_ich_2012} that technology influences people the same way they influence technology and apply it in a way that establishes a technology-based rethinking process inducing a change in organizational processes.
 
 
 \section{Research Question}
-The problem as previously described is usually not perceived as such one in the software development industry, it's just the characteristics of established software development processes and inherently caused by the way software is currently created.
+The problem as previously described is usually not perceived explicitly in the software development industry, it's just the characteristics of established software development processes and inherently caused by the way software is currently created.
 In Bret Victor's words this \emph{problem} might rather be stated as a \emph{principle} that software development does not have to be like that \autocite{victor_inventing_2012}.
-The upcoming ideas emerged from the author's psychology internship at the company Innerspace GmbH in Wattens, Austria.
-Usually employed as a software architect the author switched perspectives for two months and studied the software development process from an external view.
+The upcoming ideas emerged from the author's psychology internship at the company Innerspace GmbH in Wattens, Austria\footnote{\url{https://www.innerspace.eu/}}.
+Generally employed as a software architect the author switched perspectives for two months and studied the software development process from a more psychological view.
 The company Innerspace creates virtual reality trainings for pharmaceutical companies.
-One main difference to traditional web or desktop application development is the diversity of people's backgrounds involved in the process of creating virtual reality trainings.
+One main difference to traditional web or desktop application development is the diversity of the backgrounds of the people involved in the process of creating Virtual Reality trainings.
 In addition to software developers, 3D artists, training designers, narrators and game engineers are needed for content creation.
-As already stated in \cref{sec:problem-definition} in the end the source code is the actual source of truth.
+As already stated in \cref{sec:problem-definition}, at the end the source code is the actual source of truth.
 Creating a consistent product of high quality, the 3D assets, narrations and training flows have to be aligned closely to the program's source code as they are also artifacts of the development process.
 
-While researching possible technical solutions for the problem of implementing the application flow of complex applications like virtual reality trainings the author stumbled upon the rather old concept of \emph{Statecharts} \autocite{harel_statecharts:_1987}. Statecharts are a ``visual formalism for complex systems''. In more general words this means that Statecharts describe a mathematically proven visual language for creating computer programs. The notation is based on a combination of flowcharts and state diagrams and enables a visual representation of logic in computer programs. Furthermore the visual language of Statecharts provides simulation capabilities and therefore enables people to visually see and experiment with the logic of the program, without actually using the program. In fact, the program might not even exist at this point, but people can collaboratively design what the program should do. The main hypothesis is that the nature of an executable visual model allows the participants in a software project to create a common mental model, resulting in a new way of communication that prematurely prevents misunderstandings.
+While researching possible technical solutions for the problem of implementing the application flow of complex applications like Virtual Reality trainings, the author stumbled upon the rather old concept of \emph{statecharts} \autocite{harel_statecharts:_1987}. Statecharts are a ``visual formalism for complex systems'' \autocite{harel_statecharts:_1987}. In more general words this means, that statecharts describe a mathematically proven visual language for creating computer programs. The notation is based on a combination of flowcharts and state diagrams and enables a visual representation of logic in computer programs. Furthermore the visual language of statecharts provides simulation capabilities and therefore enables people to visually see and experiment with the logic of the program, without actually using the program. In fact, the program might not even exist at this point, but people can collaboratively design what the program should do. The main hypothesis is that the nature of an executable visual model allows the participants in a software project to create a common mental model, resulting in a new way of communication that prevents misunderstandings early on.
 
-To further improve this communication process, the fractal nature of Statecharts (logic can be refined from abstract to concrete) is the perfect fit for hole driven development (see \cref{sec:hole-driven-development}). This relatively new idea of writing computer programs can be compared with a ``fill in the blank''-exercise. Instead of having to write a fully completed program, developers can leave holes for the computer and then ask it to provide help based on mathematical reasoning. Applying this idea at the level of human interaction, the second hypothesis is that introducing holes in Statecharts (enabled by their fractal and composable nature) enables a new way of communicating, defining and refining requirements.
+To further improve this communication process, the fractal nature of statecharts (logic can be refined from abstract to concrete) is the perfect fit for hole-driven development (see \cref{sec:hole-driven-development}). This relatively new idea of writing computer programs can be compared with a ``fill in the blank''exercise. Instead of having to write a fully completed program, developers can leave holes for the computer and then ask it to provide help based on mathematical reasoning. Applying this idea at the level of human interaction, the second hypothesis is that introducing holes in statecharts (enabled by their fractal and composable nature) enables a new way of communicating, defining and refining requirements.
 
-This leads to the research question: \emph{Which findings of cognitive and social psychology support the usage of Statecharts combined with hole driven development for enabling better communication in software development processes, or how can these concepts be adapted to closer align to the way the human brain works?}
+This leads to the research question: \emph{Which findings of cognitive and social psychology support the usage of statecharts combined with hole-driven development for enabling better communication in software development processes, or how can these concepts be adapted to closer align to the way the human brain works?}
 
-After introducing the technological concepts in \cref{chap:technological-foundation} and the psychological foundations in \cref{chap:psychological-foundation} these findings will be combined as implications are presented in \cref{chap:possible-applications} followed by a concluding discussion in \cref{chap:discussion}.
+After introducing the technological concepts in \cref{chap:technological-foundation} and the psychological foundations in \cref{chap:psychological-foundation} these findings will be combined ans presented in \cref{chap:possible-applications} followed by a concluding discussion in \cref{chap:discussion}.
 
-% Utilizing the features of Statecharts and hole driven development to align this process closer to how people think might result in a huge productivity boost and take a lot of burden off the people involved in creating software.
+% Utilizing the features of statecharts and hole driven development to align this process closer to how people think might result in a huge productivity boost and take a lot of burden off the people involved in creating software.

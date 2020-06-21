@@ -1,26 +1,37 @@
 \chapter{Discussion}
+\todo{that's new}
 \label{chap:discussion}
 \epigraph{``One way to define `programming' is as the process of transforming a mental plan of desired actions for a computer into a representation that can be understood by the computer.''}{\textit{Jean-Michel Hoc}}
-\todo{TODO}
-- Structure not Flow \autocite{melia_comparison_2016}
-- "I have concentrated on requirements models only. The applicability and usability of the proposed statechart variant for other purposes, in particular for architecture and detailed design remains to be investigated." \autocite[5]{glinz_statecharts_2002}
-- A critical view on Statecharts \autocite{breen_statecharts_2004}
-- State vs. Context \autocite[36]{leveson_experiences_1991}
-- Why Statecharts aren't used more widely \autocite[9]{harel_statecharts_2007}
-- Flowcharts vs. Statecharts (they are a model) \autocite[10]{harel_statecharts_2007}
+As Jean-Michel Hoc put it into words, a programmer's main task is explanation.
+Before something can be explained, it must be understood deeply, also called the process of theory building as \textcite{naur_programming_1985} observed, a predominantly psychological process.
+The major difficulty in interdisciplinary research is finding the sweet spot between the academic fields under research.
+This thesis is neither intended to generate groundbreaking findings in psychology, nor in software engineering, much more it should be a propositional thesis, it should be food for thought, proposing ideas that may lead to new fields of research.
 
-- "Consequently, this approach can help to avoid the waste problem that results in redevelopment effort from incorrectly specified products." \autocite[10]{sheldon_software_2000}
-- [Matthew Frederick - three levels of knowing](https://twitter.com/Kpaxs/status/1115633791966511109)
+\textcite[10]{sheldon_software_2000} put the author's intention for starting the research on the psychological aspects of statecharts into words: "Consequently, this approach can help to avoid the waste problem that results in redevelopment effort from incorrectly specified products."
+The findings in the thesis definitely highlight the similarities between mental models and statecharts extended by hole-driven development.
+Whether the ideas presented in this thesis are applicable to reality, needs to be investigated in future research due to the nature of this thesis being a literature research.
 
-risk of different mental models created that are not understood by colleagues
+One might ask why statecharts are not standard in reactive application development.
+\textcite{harel_statecharts_2007} himself reflected on this topic concluding, that the official semantics of statecharts were specified way too late which lead to the development of conflicting semantics that fractured the community.
+Additionally a lack of tools and learning resources might be the reason for the low adoption of such a promising concept, indicating the irony that a model suitable for transferring mental models failed at transferring itself.
+\textcite{breen_statecharts_2004} published a critical view on statecharts stating that they might be too complex, suggesting that some features could be removed without losing necessary expressiveness.
+Regarding the topic of requirements analysis \textcite{glinz_statecharts_2002} examined how statecharts could be used as requirements models stating that: "I have concentrated on requirements models only. The applicability and usability of the proposed statechart variant for other purposes, in particular for architecture and detailed design remains to be investigated." \autocite[5]{glinz_statecharts_2002}
+The usability of statecharts might as well be a really interesting research topic especially with groundbreaking papers released long after the formalism of statecharts such as ``The `Physics' of Notations'' \autocite{moody_physics_2009}.
 
-\section{Further Implications}
-\subsection{Building Prototypes}
-\subsection{Thinking in States/Preventing Errors}
-\subsection{Analyzing Requirements}
-- \autocite{leveson_experiences_1991}
+Further research topics might be: utilizing the model aspect of statecharts to create real evolutionary prototypes (targeted at computer scientists), the psychology of thinking in states and how this is related to preventing failures (targeted at psychologists) or adding the concept of literate programming (conveying mental models even better, [\textcite{knuth_literate_1984}]) to the ideas presented in this thesis.
 
-\section{Literate Programming}
+
+% - [Matthew Frederick - three levels of knowing](https://twitter.com/Kpaxs/status/1115633791966511109)
+
+
+
+% \section{Further Implications}
+% \subsection{Building Prototypes}
+% \subsection{Thinking in States/Preventing Errors}
+% \subsection{Analyzing Requirements}
+% - \autocite{leveson_experiences_1991}
+
+% \section{Literate Programming}
 %- Human-Computer vs. Human-Human Interaction
 %\label{sub:literate-programming}
 %- Communicating Mental Models \autocite[275]{kitchenham_research_1990}
